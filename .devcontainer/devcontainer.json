@@ -2,14 +2,21 @@
   "name": "Python Playwright Tutorial",
   "image": "mcr.microsoft.com/playwright/python:v1.30.0-focal",
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.defaultProfile.linux": "bash",
     "python.pythonPath": "/usr/local/bin/python",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.formatting.autopep8": true,
-    "python.formatting.black": false,
+    "python.formatting.autopep8": false,
+    "python.formatting.black": true,
     "python.formatting.yapf": false,
     "python.testing.pytestEnabled": false
   },
-  "extensions": ["ms-python.python"]
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-azuretools.vscode-docker",
+    "yzhang.markdown-all-in-one"
+  ],
+  "forwardPorts": [9222],
+  "postCreateCommand": "echo 'Welcome to the Python Playwright Tutorial!'"
 }
